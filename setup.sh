@@ -46,7 +46,7 @@ gsettings set com.ubuntu.update-notifier show-livepatch-status-icon false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
 ## Remove junk
-sudo apt-get remove ubuntu-web-launchers thunderbird rhythmbox -y
+sudo apt-get remove thunderbird rhythmbox ubuntu-web-launchers -y
 
 ## Multimedia
 sudo apt-get install -y gimp scribus
@@ -57,7 +57,7 @@ sudo apt-get install -y steam-installer
 ## Music
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install spotify-client
+sudo apt-get update && sudo apt-get install spotify-client -y
 
 ## Text Editor
 sudo snap install --classic code
