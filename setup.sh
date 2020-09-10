@@ -1,4 +1,4 @@
-  GNU nano 5.2                                                                                                       setup.sh                                                                                                                 
+                                                                                                       setup.sh                                                                                                                 
 #!/bin/bash
 
 
