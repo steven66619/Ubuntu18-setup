@@ -1,6 +1,4 @@
-                                                                                                       setup.sh                                                                                                                 
-#!/bin/bash
-
+                                                                                                                                                         #!/bin/bash
 
 # Initial Software
 
@@ -8,15 +6,6 @@ sudo apt update
 
 sudo apt install build-essential
 
-# Remove undesirable packages:
-
-sudo apt purge gstreamer1.0-fluendo-mp3 deja-dup shotwell whoopsie whoopsie-preferences -yy
-
-# Remove snaps and get packages from apt:
-
-sudo snap remove gnome-characters gnome-calculator gnome-system-monitor
-sudo apt install gnome-characters gnome-calculator gnome-system-monitor \
-gnome-software-plugin-flatpak -yy
 
 # Purge Firefox, install Chromium:
 
@@ -36,7 +25,7 @@ gsettings set com.ubuntu.update-notifier show-livepatch-status-icon false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
 ## Remove junk
-sudo apt-get remove thunderbird rhythmbox ubuntu-web-launch
+sudo apt-get remove thunderbird rhythmbox 
 
 ## Disable Apport
 sudo sed -i 's/enabled=1/enabled=0/g' /etc/default/apport
@@ -45,4 +34,3 @@ sudo sed -i 's/enabled=1/enabled=0/g' /etc/default/apport
 sudo apt update && sudo apt upgrade -y
 
 echo $'\n'$"*** All done! Please reboot now. ***"
-
